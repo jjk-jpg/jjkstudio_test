@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import { getAIFoodRecommendations } from '../services/gemini';
-import { Recommendation } from '../types';
+import { getAIFoodRecommendations } from '../services/gemini.ts';
+import { Recommendation } from '../types.ts';
 
 interface HomeScreenProps {
   onLogout: () => void;

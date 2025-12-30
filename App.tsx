@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import AuthScreen from './components/AuthScreen';
-import HomeScreen from './components/HomeScreen';
+import AuthScreen from './components/AuthScreen.tsx';
+import HomeScreen from './components/HomeScreen.tsx';
 
 const App: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);

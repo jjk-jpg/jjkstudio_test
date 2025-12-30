@@ -1,9 +1,11 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
-import { Recommendation } from "../types";
+import { Recommendation } from "../types.ts";
 
 export const getAIFoodRecommendations = async (mood: string): Promise<Recommendation> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+  // process.env가 정의되지 않은 환경에서도 에러가 나지 않도록 처리
+  const apiKey = typeof process !== 'undefined' ? process.env.API_KEY : (window as any).API_KEY;
+  const ai = new GoogleGenAI({ apiKey: apiKey || '' });
   
   const hour = new Date().getHours();
   let timeStr = "점심";

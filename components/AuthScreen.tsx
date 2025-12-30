@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { AuthMode } from '../types';
+import { AuthMode } from '../types.ts';
 
 interface AuthScreenProps {
   onLoginSuccess: () => void;
@@ -122,7 +122,7 @@ const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
             type="submit"
             className="w-full bg-primary hover:bg-primary/90 text-white font-black py-5 rounded-2xl shadow-xl shadow-primary/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 mt-4"
           >
-            <span className="text-lg">{mode === AuthMode.LOGIN ? '로그인하기' : '지금 시작하기'}</span>
+            <span className="text-lg font-bold">{mode === AuthMode.LOGIN ? '로그인하기' : '지금 시작하기'}</span>
             <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>chevron_right</span>
           </button>
         </form>
