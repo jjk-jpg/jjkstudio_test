@@ -1,0 +1,7 @@
+{
+  "name": "소정 테스트 : Gemini Food Delivery",
+  "description": "A high-performance food delivery app interface with AI-powered meal recommendations using Gemini.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
